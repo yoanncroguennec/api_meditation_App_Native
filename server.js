@@ -34,6 +34,16 @@ app.listen(port, () => {
   console.log(`Server running on port : ${port}`);
 });
 
+// Routes
+app.get("/", (req, res) => {
+  // res.json("Bienvenue sur l'API");
+  // // res.status(300).json({ message: "Bienvenue sur l'API" });
+  const userIp = req.ip;
+  // console.log(userIp);
+  res.send(userIp);
+  // return res.json({ userIp });
+});
+
 //endpoint to create a habit in the backend
 app.post("/habits", async (req, res) => {
   try {
