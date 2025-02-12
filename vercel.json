@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "name": "Net Movie api",
+  "public": true,
+  "builds": [{ "src": "server.js", "use": "@vercel/node" }],
+  "routes": [{ "src": "/(.*)", "dest": "/server.js" }]
+}
